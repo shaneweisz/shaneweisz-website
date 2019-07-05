@@ -1,0 +1,10 @@
+.table {
+  width: 90%;
+}
+
+td{
+    font-size: 3.0em;
+    text-align: center;
+    width: 30%;
+    height: 100px;
+}
