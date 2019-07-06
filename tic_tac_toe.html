@@ -10,7 +10,7 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-              <a class="navbar-brand" href="#">Welcome</a>
+              <a class="navbar-brand" href="default.html">Welcome</a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -31,21 +31,37 @@
                 </ul>
               </div>
 
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="tic_tac_toe.html">Tic Tac Toe</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="connect4.html">Connect Four</a>
+                  </li>
+                </ul>
+              </div>
+
         </nav>
-        <div class="container">
+        <div class="container" align="center">
             <div class="jumbotron">
                 <h1>Tic Tac Toe</h1>
                 <p class="lead">Please play!</p>
                 <p><em>Click once for an X,
                         twice for an O
-                        and thrice to reset a cell.</em></p>
+                        and thrice to reset a cell if you'd like it so.</em></p>
                 <br>
                 <button id="btnRestart" type="button" class="btn btn-primary btn-lg btn-block">Restart</button>
             </div>
         </div>
 
-        <div class="container">
-            <table class="table">
+        <div class="container" align="center">
+            <table class="table" align="center">
                 <tr>
                     <td id = "id11"></td>
                     <td id = "id12"></td>
