@@ -9,3 +9,8 @@ td{
 tr{
     border: 2px solid black;
 }
+
+#btnRestart{
+    height: 60px;
+    background-color: black;
+}
