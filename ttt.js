@@ -20,3 +20,15 @@ for (var i = 1; i <= 3; i++)
         });
     }
 }
+
+btn = document.getElementById("btnRestart")
+btn.addEventListener("click", function(){
+    for (var i = 1; i <= 3; i++)
+    {
+        for (var j = 1; j <= 3; j++)
+        {
+            let cell = document.querySelector("#id" + i + "" + j)
+            cell.textContent = ""
+        }
+    }
+})
