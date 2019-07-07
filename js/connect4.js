@@ -1,14 +1,14 @@
-var player1 = prompt("Enter Player 1's name")
-var player2 = prompt("Enter Player 2's name")
+var player1 = "Player 1";
+var player2 = "Player 2";
 
-$(".lead").html("<strong>" + player1 + "'s turn (Red) <\strong>")
-$(".lead").css('color','red')
-var turn = 0
+$(".lead").html("<strong>" + player1 + "'s turn (Red) </strong>");
+$(".lead").css('color','red');
+var turn = 0;
 
-var cells = $("table button")
-console.log(cells)
+var cells = $("table button");
+console.log(cells);
 
-var board = []
+var board = [];
 for (var i = 0; i < 6; i++)
 {
     var row = []
@@ -34,9 +34,9 @@ function clearBoard()
 function restart() {
     clearBoard();
     enableAll();
-    $(".lead").html("<strong>" + player1 + "'s turn (Red) <\strong>");
+    $(".lead").html("<strong>" + player1 + "'s turn (Red) </strong>");
     $(".lead").css('color','red');
-    var turn = 0;
+    turn = 0;
 }
 
 $("#btnRestart").on('click',restart);
@@ -98,26 +98,26 @@ function checkForWinner()
     rt = right();
     if(rt === 0)
     {
-        $(".lead").html("<strong>" + player1 + " WON!! <\strong>");
+        $(".lead").html("<strong>" + player1 + " WON!! </strong>");
         $(".lead").css('color','red');
         disableAll();
     }
     else if(rt === 1)
     {
-        $(".lead").html("<strong>" + player2 + " WON!! <\strong>");
+        $(".lead").html("<strong>" + player2 + " WON!! </strong>");
         $(".lead").css('color','blue');
         disableAll();
     }
     dn = down();
     if(dn === 0)
     {
-        $(".lead").html("<strong>" + player1 + " WON!! <\strong>");
+        $(".lead").html("<strong>" + player1 + " WON!! </strong>");
         $(".lead").css('color','red');
         disableAll();
     }
     else if(dn === 1)
     {
-        $(".lead").html("<strong>" + player2 + " WON!! <\strong>");
+        $(".lead").html("<strong>" + player2 + " WON!! </strong>");
         $(".lead").css('color','blue');
         disableAll();
     }
@@ -138,14 +138,14 @@ for(var i = 0; i < cells.length; i++)
                 if(turn === 0)
                 {
                     cells.eq(cell).css('background-color','red');
-                    $(".lead").html("<strong>" + player2 + "'s turn (Blue) <\strong>");
+                    $(".lead").html("<strong>" + player2 + "'s turn (Blue) </strong>");
                     $(".lead").css('color','blue');
                     checkForWinner();
                 }
                 else
                 {
                     cells.eq(cell).css('background-color','blue');
-                    $(".lead").html("<strong>" + player1 + "'s turn (Red) <\strong>");
+                    $(".lead").html("<strong>" + player1 + "'s turn (Red) </strong>");
                     $(".lead").css('color','red');
                     checkForWinner();
                 }
