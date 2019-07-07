@@ -2,3 +2,12 @@
     min-width: 100%;
     min-height: 100%;
 }
+
+a
+{
+    color: rgba(255,255,255,.5);
+}
+
+a:hover {
+    color: rgba(255,255,255,.5);
+}

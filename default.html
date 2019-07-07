@@ -9,45 +9,41 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-              <a class="navbar-brand" href="default.html">Welcome</a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+        <!-- DOCUMENTATION NAVBAR -->
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="default.html">Home</a>
-                </li>
-              </ul>
+  	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+      <a class="navbar-brand" href="default.html">Welcome</a>
+
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <!-- This is the actual code that creates the "hamburger icon" -->
+      <!-- The data-target grabs ids to put into the icon -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="navbar-nav">
+
+          <!-- the span class "sr-only" tells screen readers that Home is the active link, for accessibility -->
+          <a class="nav-item nav-link" href="default.html">Home</a>
+          <a class="nav-link" href="sign_in_page.html">Prove Friendship</a>
+
+          <!-- DROPDOWN MENU -->
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown-menu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Games
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbar-dropdown-menu">
+              <a class="dropdown-item" href="tic_tac_toe.html">Tic Tac Toe</a>
+              <a class="dropdown-item" href="connect4.html">Connect Four</a>
             </div>
-
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="sign_in_page.html">Prove you are my friend</a>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="tic_tac_toe.html">Tic Tac Toe</a>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="connect4.html">Connect Four</a>
-                  </li>
-                </ul>
-              </div>
-
-        </nav>
+          </div>
+        </div> <!-- /.navbar-nav, left-hand content -->
+      </div> <!-- /.navbar-collapse -->
+    </nav>
 
         <div class="container">
             <div class="jumbotron">
@@ -59,7 +55,7 @@
                 <p class="lead">A third-year BSc student studying Maths, Stats and Computer Science.</p>
                 <ul class="list-group">
                     <li class="list-group-item">Sign in as one of my friends to prove to me that you visited my website.</li>
-                    <li class="list-group-item">Be sure to play some Tic Tac Toe for some world-class fun!</li>
+                    <li class="list-group-item">Be sure to play some Tic Tac Toe or Connect Four for some world-class fun!</li>
                     <li class="list-group-item">And don't forget to be blown away by the super cool pictures below.</li>
                 </ul>
                 </div>
