@@ -16,35 +16,32 @@ function changeColor()
 var interval;
 interval = setInterval("changeColor()", 500);
 
-k = 1
+count = 0
 function changeText()
 {
-    if (k % 2 == 1)
+    header.textContent = "or Batman...";
+    img.src = "batman.jpg";
+    header.style.color = "black";
+    clearInterval(interval);
+    var audio = new Audio('im-batman.mp3');
+    if (count == 0)
     {
-        header.textContent = "Dwight Schrute";
-        img.src = "dwight.jpg";
-        k+=1;
-    }
-    else
-    {
-        k+=1;
-        header.textContent = "or Batman...";
-        img.src = "batman.jpg";
-        header.style.color = "black";
-        clearInterval(interval);
-        var audio = new Audio('im-batman.mp3');
         audio.play();
+        count += 1;
     }
 }
 function changeTextBack()
 {
-    if (k % 2 == 0)
-    {
-        clearInterval(interval);
-    }
     interval = setInterval("changeColor()", 500);
     header.textContent = "Shane Weisz";
     img.src = "https://sandtonchronicle.co.za/wp-content/uploads/sites/33/2016/12/shane-st-davids.jpg";
+    if (count == 1)
+    {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+        //alert("I'm not saying I'm Batman, I'm just saying have you ever seen me and Batman on this website at the same time?");
+        count += 1;
+    }
 }
 header.addEventListener("mouseover", changeText)
 header.addEventListener("mouseout", changeTextBack)
