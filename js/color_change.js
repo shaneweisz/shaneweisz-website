@@ -20,7 +20,7 @@ count = 0
 function changeText()
 {
     header.textContent = "or Batman...";
-    img.src = "batman.jpg";
+    img.src = "media/batman.jpg";
     header.style.color = "black";
     clearInterval(interval);
     var audio = new Audio('im-batman.mp3');
