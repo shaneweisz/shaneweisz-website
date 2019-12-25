@@ -34,7 +34,7 @@ function changeTextBack()
 {
     interval = setInterval("changeColor()", 500);
     header.textContent = "Shane Weisz";
-    img.src = "https://sandtonchronicle.co.za/wp-content/uploads/sites/33/2016/12/shane-st-davids.jpg";
+    img.src = "media/headshot.jpg";
 }
 
 header.addEventListener("mouseover", changeText)
