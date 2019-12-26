@@ -77,6 +77,39 @@ function down()
     return -1; //not found
 }
 
+function diag()
+{
+    for (var row = 0; row <= 2; row++)
+    {
+        for(var col = 0; col <= 4; col++)
+        {
+            if(board[row][col] !== -1)
+            {
+                if(board[row][col] === board[row+1][col+1] && board[row][col] === board[row+2][col+2]  && board[row][col] === board[row+3][col+3] )
+                {
+                    return board[row][col];
+                }
+            }
+        }
+    }
+
+    for (var row = 0; row <= 2; row++)
+    {
+        for(var col = 6; col >= 3; col--)
+        {
+            if(board[row][col] !== -1)
+            {
+                if(board[row][col] === board[row+1][col-1] && board[row][col] === board[row+2][col-2]  && board[row][col] === board[row+3][col-3] )
+                {
+                    return board[row][col];
+                }
+            }
+        }
+    }
+
+    return -1; //not found
+}
+
 function disableAll()
 {
     for(var i = 0; i < cells.length; i++)
@@ -116,6 +149,19 @@ function checkForWinner()
         disableAll();
     }
     else if(dn === 1)
+    {
+        $(".lead").html("<strong>" + player2 + " WON!! </strong>");
+        $(".lead").css('color','blue');
+        disableAll();
+    }
+    dg = diag();
+    if(dg === 0)
+    {
+        $(".lead").html("<strong>" + player1 + " WON!! </strong>");
+        $(".lead").css('color','red');
+        disableAll();
+    }
+    else if(dg === 1)
     {
         $(".lead").html("<strong>" + player2 + " WON!! </strong>");
         $(".lead").css('color','blue');
