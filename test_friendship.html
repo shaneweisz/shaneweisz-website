@@ -46,19 +46,19 @@
         <div class="container">
             <div class="jumbotron">
                 <h1 class="display-5">Prove You Are My Friend</h1>
-                <p class = "lead"><em>(The proof is trivial and left as an exercise for the reader)</em></p>
+                <p class = "lead" id="subheader"><em>(The proof is trivial and left as an exercise for the reader)</em></p>
             </div>
         </div>
 
         <div class="container">
             <form>
               <div class="form-group">
-                <label for="exampleInputEmail1">Name</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+                <label for="exampleInputEmail1">Name:</label>
+                <input type="text" id="txtEnterName" placeholder="Enter name here">
               </div>
               <div class="form-group">
 
-                <label for="thm">1) What is my favourite branch of mathematics?</label>
+                <label id="L1" for="thm">1) What is my favourite branch of mathematics?</label>
                     <select class="form-control" id="Q1">
                       <option>A) Real Analysis</option>
                       <option>B) Combinatorics</option>
@@ -67,7 +67,7 @@
                       <option>E) Abstract Algebra</option>
                     </select>
                 <br>
-                <label for="thm">2) Who is my all-time FPL hero?</label>
+                <label id="L2" for="thm">2) Who is my all-time FPL hero?</label>
                     <select class="form-control" id="Q2">
                       <option>A) Harry Kane</option>
                       <option>B) Aaron Ramsey</option>
@@ -76,8 +76,8 @@
                       <option>E) Riyad Mahrez</option>
                     </select>
                 <br>
-                <label for="thm">3) What is my favourite chess opening?</label>
-                    <select class="form-control" id="Q1">
+                <label id="L3" for="thm">3) What is my favourite chess opening?</label>
+                    <select class="form-control" id="Q3">
                       <option>A) Scotch Game</option>
                       <option>B) Sicilian Defense</option>
                       <option>C) Queen's Gambit</option>
@@ -85,8 +85,8 @@
                       <option>E) Bishop's Opening</option>
                     </select>
                 <br>
-                <label for="thm">What is my favourite movie?</label>
-                    <select class="form-control" id="Q3">
+                <label id="L4" for="thm">4) What is my favourite movie?</label>
+                    <select class="form-control" id="Q4">
                       <option>A) The Godfather</option>
                       <option>B) Forrest Gump</option>
                       <option>C) The Shawshank Redemption</option>
@@ -94,8 +94,8 @@
                       <option>E) Good Will Hunting</option>
                     </select>
                 <br>
-                <label for="thm">4) What is my favourite programming language?</label>
-                    <select class="form-control" id="Q4">
+                <label id="L5" for="thm">5) What is my favourite programming language?</label>
+                    <select class="form-control" id="Q5">
                       <option>A) R</option>
                       <option>B) Python</option>
                       <option>C) Java</option>
@@ -103,8 +103,8 @@
                       <option>E) JavaScript</option>
                     </select>
                 <br>
-                <label for="thm">5) How fast can I solve a Rubik's cube?</label>
-                    <select class="form-control" id="Q4">
+                <label id="L6" for="thm">6) How fast can I solve a Rubik's cube?</label>
+                    <select class="form-control" id="Q6">
                       <option>A) 15 seconds</option>
                       <option>B) 1 minute</option>
                       <option>C) 1 minute 30 seconds</option>
@@ -112,8 +112,8 @@
                       <option>E) Lol I can't solve one</option>
                     </select>
                 <br>
-                <label for="thm">6) What is my favourite colour T-Shirt?</label>
-                    <select class="form-control" id="Q4">
+                <label id="L7" for="thm">7) What is my favourite colour T-Shirt?</label>
+                    <select class="form-control" id="Q7">
                       <option>A) Black</option>
                       <option>B) White</option>
                       <option>C) Orange</option>
@@ -121,8 +121,8 @@
                       <option>E) Red</option>
                     </select>
                 <br>
-                <label for="thm">7) What is my favourite TV Series?</label>
-                    <select class="form-control" id="Q5">
+                <label id="L8" for="thm">8) What is my favourite TV Series?</label>
+                    <select class="form-control" id="Q8">
                       <option>A) Game of Thrones</option>
                       <option>B) How I Met Your Mother</option>
                       <option>C) Rick and Morty</option>
@@ -130,8 +130,8 @@
                       <option>E) Friends</option>
                     </select>
                 <br>
-                <label for="thm">8) Who was my biggest childhood celebrity crush?</label>
-                    <select class="form-control" id="Q5">
+                <label id="L9" for="thm">9) Who was my biggest childhood celebrity crush?</label>
+                    <select class="form-control" id="Q9">
                       <option>A) Selena Gomes</option>
                       <option>B) Miley Cyrus (Hannah Montana)</option>
                       <option>C) Jennifer Aniston</option>
@@ -139,8 +139,8 @@
                       <option>E) Carly Rose Sonenclar</option>
                     </select>
                 <br>
-                <label for="thm">9) What is my favourite musical?</label>
-                    <select class="form-control" id="Q4">
+                <label id="L10" for="thm">10) What is my favourite musical?</label>
+                    <select class="form-control" id="Q10">
                       <option>A) Les Miserables</option>
                       <option>B) The Book of Mormon</option>
                       <option>C) Hamilton</option>
@@ -148,8 +148,8 @@
                       <option>E) I don't like musicals</option>
                     </select>
                 <br>
-                <label for="thm">10) What was I most scared of as a child?</label>
-                    <select class="form-control" id="Q4">
+                <label id="L11" for="thm">11) What was I most scared of as a child?</label>
+                    <select class="form-control" id="Q11">
                       <option>A) Spiders</option>
                       <option>B) Clowns</option>
                       <option>C) The Fruity Loopy Bird</option>
@@ -159,15 +159,15 @@
                 <br>
 
               </div>
-              <br>
-              <button id = "btnSubmit" type="submit" class="btn btn-primary">Submit</button>
             </form>
+
+            <button id = "btnSubmit" type="submit" class="btn btn-primary">Submit</button>
         </div>
 
         <!-- Need to have JQuery and Javascript for DropDown Actions to work -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        <script> src = "js/test_friendship.js" </script>
+        <script src = "js/test_friendship.js"></script>
     </body>
 </html>
