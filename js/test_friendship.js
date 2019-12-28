@@ -1,4 +1,4 @@
-var answers = ["E: Abstract Algebra", "C: Michu", "A: Scotch Game", "B: Forrest Gump", "B: Python", "C: 1 minute 30 seconds", "B: White", "E: Friends", "E: Carly Rose Sonenclar", "C: Hamilton", "C: The Fruity Loopy Bird"]
+var answers = ["E: Abstract Algebra", "C: Michu", "A: Scotch Game", "B: Forrest Gump", "B: Python", "C: 1 minute 30 seconds", "E: Friends", "E: Carly Rose Sonenclar", "C: Hamilton", "C: The Fruity Loopy Bird"]
 
 btn = document.getElementById("btnSubmit");
 btn.addEventListener("click", function(){
@@ -12,7 +12,7 @@ btn.addEventListener("click", function(){
     btn.disabled = "disabled";
 
     var count = 0;
-    for (var i = 1; i <= 11; i++)
+    for (var i = 1; i <= 10; i++)
     {
         let q = document.querySelector("#Q" + i);
         q.disabled = "disabled";
@@ -29,8 +29,8 @@ btn.addEventListener("click", function(){
             $("#Q" + i).css("background", "red");
         }
     }
-    alert(name + ", you got " + count + " out of 11 correct!");
-    $(subheader).html($(subheader).text() + "<br><br><strong>" + name + ", you got " + count + " out of 11 correct</strong> ");
+    alert(name + ", you got " + count + " out of 10 correct!");
+    $(subheader).html($(subheader).text() + "<br><br><strong>" + name + ", you got " + count + " out of 10 correct</strong> ");
     $(subheader).css('font-size','2em');
 
 });
