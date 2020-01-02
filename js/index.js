@@ -1,7 +1,7 @@
 // Colour Changing of Shane Weisz Title:
-
+//
 var header = document.querySelector("h1");
-var img = document.getElementById("main_image");
+// var img = document.getElementById("main_image");
 
 function changeColor()
 {
@@ -20,22 +20,22 @@ interval = setInterval("changeColor()", 500);
 
 // Batman Swapping:
 
-function changeText()
-{
-    header.textContent = "or Batman...";
-    img.src = "media/batman.jpg";
-    header.style.color = "black";
-    clearInterval(interval);
-    var audio = new Audio('media/im-batman.mp3');
-    audio.play();
-}
-
-function changeTextBack()
-{
-    interval = setInterval("changeColor()", 500);
-    header.textContent = "Shane Weisz";
-    img.src = "media/headshot.jpg";
-}
-
-header.addEventListener("mouseover", changeText)
-header.addEventListener("mouseout", changeTextBack)
+// function changeText()
+// {
+//     header.textContent = "or Batman...";
+//     img.src = "media/batman.jpg";
+//     header.style.color = "black";
+//     clearInterval(interval);
+//     var audio = new Audio('media/im-batman.mp3');
+//     audio.play();
+// }
+//
+// function changeTextBack()
+// {
+//     interval = setInterval("changeColor()", 500);
+//     header.textContent = "Shane Weisz";
+//     img.src = "media/headshot.jpg";
+// }
+//
+// header.addEventListener("mouseover", changeText)
+// header.addEventListener("mouseout", changeTextBack)
