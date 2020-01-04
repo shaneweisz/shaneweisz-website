@@ -131,39 +131,39 @@ function checkForWinner()
     rt = right();
     if(rt === 0)
     {
-        $(".lead").html("<strong>" + player1.toUpperCase() + " WON!! </strong>");
+        $(".lead").html("<p class='alert alert-danger'><strong>" + player1.toUpperCase() + " WON!! </strong></p>");
         $(".lead").css('color','red');
         disableAll();
     }
     else if(rt === 1)
     {
-        $(".lead").html("<strong>" + player2.toUpperCase() + " WON!! </strong>");
+        $(".lead").html("<p class='alert alert-primary'><strong>" + player2.toUpperCase() + " WON!! </strong></p>");
         $(".lead").css('color','blue');
         disableAll();
     }
     dn = down();
     if(dn === 0)
     {
-        $(".lead").html("<strong>" + player1.toUpperCase() + " WON!! </strong>");
+        $(".lead").html("<p class='alert alert-danger'><strong>" + player1.toUpperCase() + " WON!! </strong></p>");
         $(".lead").css('color','red');
         disableAll();
     }
     else if(dn === 1)
     {
-        $(".lead").html("<strong>" + player2.toUpperCase() + " WON!! </strong>");
+        $(".lead").html("<p class='alert alert-primary'><strong>" + player2.toUpperCase() + " WON!! </strong></p>");
         $(".lead").css('color','blue');
         disableAll();
     }
     dg = diag();
     if(dg === 0)
     {
-        $(".lead").html("<strong>" + player1.toUpperCase() + " WON!! </strong>");
+        $(".lead").html("<p class='alert alert-danger'><strong>" + player1.toUpperCase() + " WON!! </strong></p>");
         $(".lead").css('color','red');
         disableAll();
     }
     else if(dg === 1)
     {
-        $(".lead").html("<strong>" + player2.toUpperCase() + " WON!! </strong>");
+        $(".lead").html("<p class='alert alert-primary'><strong>" + player2.toUpperCase() + " WON!! </strong></p>");
         $(".lead").css('color','blue');
         disableAll();
     }
