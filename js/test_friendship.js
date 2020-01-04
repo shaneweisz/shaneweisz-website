@@ -48,6 +48,5 @@ btn.addEventListener("click", function(){
         $(subheader).html( $(subheader).text() + '<br><br>' + '<p class="alert alert-success" role="alert" id="message3">' + "<strong>" + message + "</strong> </p>");
 
     }
-    $(subheader).css('font-size','2em');
 
 });
