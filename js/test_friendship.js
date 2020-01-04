@@ -29,8 +29,25 @@ btn.addEventListener("click", function(){
             $("#Q" + i).css("background", "red");
         }
     }
-    alert("You got " + count + " out of 10 correct!");
-    $(subheader).html($(subheader).text() + "<br><br><strong>You got " + count + " out of 10 correct</strong> ");
+    if(count <= 3)
+    {
+        var message = "Crisis, you only got " + count + " out of 10 correct!";
+        alert(message);
+        $(subheader).html( $(subheader).text() + '<br><br>' + '<p class="alert alert-danger" role="alert" id="message1">' + "<strong>" + message + "</strong> </p>");
+    }
+    else if (count <= 6)
+    {
+        var message = "Decent, you got " + count + " out of 10 correct!";
+        alert(message);
+        $(subheader).html( $(subheader).text() + '<br><br>' + '<p class="alert alert-info" role="alert" id="message2">' + "<strong>" + message + "</strong> </p>");
+    }
+    else
+    {
+        var message = "Not too shabby! You got " + count + " out of 10 correct!";
+        alert(message);
+        $(subheader).html( $(subheader).text() + '<br><br>' + '<p class="alert alert-success" role="alert" id="message3">' + "<strong>" + message + "</strong> </p>");
+
+    }
     $(subheader).css('font-size','2em');
 
 });
