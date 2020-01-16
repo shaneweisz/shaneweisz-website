@@ -1,0 +1,26 @@
+.board td{
+    border: 5px solid black;
+    width:  110px;
+    height: 110px;
+
+}
+
+.board button{
+    font-size: 4em;
+    width:  110px;
+    height: 95px; /* Height of button slightly less than td to eliminate button shrinking effect when clicked */
+    border: 0px; /* Ensures there is no border between the button and the td*/
+}
+
+.board button:focus { /* Removes the border effect when button clicked */
+    outline: none;
+}
+
+#btnRestart{
+    height: 60px;
+    background-color: black;
+}
+
+#turn{
+    font-size: 2em;
+}

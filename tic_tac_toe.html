@@ -6,7 +6,7 @@
         <title>Tic Tac Toe</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/ttt.css">
+        <link rel="stylesheet" href="css/tic_tac_toe.css">
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -46,10 +46,8 @@
         <div class="container" align="center">
             <div class="jumbotron">
                 <h1>Tic Tac Toe</h1>
-                <p class="lead">Please play!</p>
-                <p><em>Click once for an X,
-                        twice for an O
-                        and thrice to reset a cell if you'd like it so.</em></p>
+                <p class="lead">Get three in a row to win!</p>
+                <p id="turn"></p>
                 <br>
                 <button id="btnRestart" type="button" class="btn btn-primary btn-lg btn-block">Restart</button>
             </div>
@@ -58,21 +56,23 @@
         <div class="container" align="center">
             <table class="board" align="center">
                 <tr>
-                    <td id = "id11"></td>
-                    <td id = "id12"></td>
-                    <td id = "id13"></td>
+                    <td><button type="button" id = "id11"></button></td>
+                    <td><button type="button" id = "id12"></button></td>
+                    <td><button type="button" id = "id13"></button></td>
                 </tr>
                 <tr>
-                    <td id = "id21"></td>
-                    <td id = "id22"></td>
-                    <td id = "id23"></td>
+                    <td><button type="button" id = "id21"></button></td>
+                    <td><button type="button" id = "id22"></button></td>
+                    <td><button type="button" id = "id23"></button></td>
                 </tr>
                 <tr>
-                    <td id = "id31"></td>
-                    <td id = "id32"></td>
-                    <td id = "id33"></td>
+                    <td><button type="button" id = "id31"></button></td>
+                    <td><button type="button" id = "id32"></button></td>
+                    <td><button type="button" id = "id33"></button></td>
                 </tr>
             </table>
+
+            <br>
         </div>
 
         <!-- Need to have JQuery and Javascript for DropDown Actions to work -->
@@ -80,6 +80,6 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-        <script src="js/ttt.js"></script>
+        <script src="js/tic_tac_toe.js"></script>
     </body>
 </html>
