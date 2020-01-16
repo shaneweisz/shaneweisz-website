@@ -1,15 +1,16 @@
 .board td{
     border: 5px solid black;
-    width:  110px;
-    height: 110px;
-
+    width:  100px;
+    height: 100px;
 }
 
 .board button{
-    font-size: 4em;
-    width:  110px;
-    height: 95px; /* Height of button slightly less than td to eliminate button shrinking effect when clicked */
+    background-color: white;
+    font-size: 3em;
+    width:  100px;
+    height: 85px; /* Height of button slightly less than td to eliminate button shrinking effect when clicked */
     border: 0px; /* Ensures there is no border between the button and the td*/
+    padding: 0px; /* Ensures text is centred on mobile */
 }
 
 .board button:focus { /* Removes the border effect when button clicked */
