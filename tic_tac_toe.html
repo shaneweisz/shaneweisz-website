@@ -1,85 +1,124 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tic Tac Toe</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/tic_tac_toe.css">
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
 
-        <a class="navbar-brand" href="index.html">Welcome</a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/tic_tac_toe.css">
+</head>
 
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <!-- This is the actual code that creates the "hamburger icon" -->
-        <!-- The data-target grabs ids to put into the icon -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<body>
+  <!-- DOCUMENTATION NAVBAR -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+    <a class="navbar-brand" href="index.html">Welcome</a>
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <!-- This is the actual code that creates the "hamburger icon" -->
+    <!-- The data-target grabs ids to put into the icon -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+      aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
 
-        <!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <div class="navbar-nav">
+    <!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="navbar-nav">
 
-            <!-- the span class "sr-only" tells screen readers that Home is the active link, for accessibility -->
-            <a class="nav-item nav-link" href="index.html">Home</a>
-            <a class="nav-link" href="test_friendship.html">Test Friendship</a>
-            <a class="nav-link" href="docs/CV.pdf">CV</a>
+        <!-- the span class "sr-only" tells screen readers that Home is the active link, for accessibility -->
+        <a class="nav-item nav-link" href="index.html">Home</a>
 
-            <!-- DROPDOWN MENU -->
-            <div class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown-menu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Games
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbar-dropdown-menu">
-                <a class="dropdown-item" href="tic_tac_toe.html">Tic Tac Toe</a>
-                <a class="dropdown-item" href="connect_four.html">Connect Four</a>
-              </div>
-            </div>
-          </div> <!-- /.navbar-nav, left-hand content -->
-        </div> <!-- /.navbar-collapse -->
-      </nav>
-        <div class="container" align="center">
-            <div class="jumbotron">
-                <h1>Tic Tac Toe</h1>
-                <p class="lead">Get three in a row to win!</p>
-                <p id="turn"></p>
-                <br>
-                <button id="btnRestart" type="button" class="btn btn-primary btn-lg btn-block">Restart</button>
-            </div>
+
+        <!-- DROPDOWN MENU -->
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown-menu" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Games
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbar-dropdown-menu">
+            <a class="dropdown-item" href="tic_tac_toe.html">Tic Tac Toe</a>
+            <a class="dropdown-item" href="connect_four.html">Connect Four</a>
+          </div>
         </div>
 
-        <div class="container" align="center">
-            <table class="board" align="center">
-                <tr>
-                    <td><button type="button" id = "id00"></button></td>
-                    <td><button type="button" id = "id01"></button></td>
-                    <td><button type="button" id = "id02"></button></td>
-                </tr>
-                <tr>
-                    <td><button type="button" id = "id10"></button></td>
-                    <td><button type="button" id = "id11"></button></td>
-                    <td><button type="button" id = "id12"></button></td>
-                </tr>
-                <tr>
-                    <td><button type="button" id = "id20"></button></td>
-                    <td><button type="button" id = "id21"></button></td>
-                    <td><button type="button" id = "id22"></button></td>
-                </tr>
-            </table>
+        <a class="nav-link" href="quiz.html">Personal Quiz</a>
 
-            <br>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown-menu" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Documents
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbar-dropdown-menu">
+            <a class="dropdown-item" href="docs/ShaneWeisz_CV.pdf">CV</a>
+            <a class="dropdown-item" href="docs/UCT_Transcript.pdf">UCT Transcript</a>
+            <a class="dropdown-item" href="docs/Matric_Certificate.pdf">Matric Certificate</a>
+          </div>
         </div>
 
-        <!-- Need to have JQuery and Javascript for DropDown Actions to work -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown-menu" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Links
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbar-dropdown-menu">
+            <a class="dropdown-item" href="https://github.com/shaneweisz">GitHub</a>
+            <a class="dropdown-item" href="https://www.linkedin.com/in/shaneweisz/">LinkedIn</a>
+          </div>
+        </div>
 
-        <script src="js/tic_tac_toe.js"></script>
-    </body>
+      </div> <!-- /.navbar-nav, left-hand content -->
+    </div> <!-- /.navbar-collapse -->
+  </nav>
+  <div class="container" align="center">
+    <div class="jumbotron">
+      <h1>Tic Tac Toe</h1>
+      <p class="lead">Get three in a row to win!</p>
+      <p id="turn"></p>
+      <br>
+      <button id="btnRestart" type="button" class="btn btn-primary btn-lg btn-block">Restart</button>
+    </div>
+  </div>
+
+  <div class="container" align="center">
+    <table class="board" align="center">
+      <tr>
+        <td><button type="button" id="id00"></button></td>
+        <td><button type="button" id="id01"></button></td>
+        <td><button type="button" id="id02"></button></td>
+      </tr>
+      <tr>
+        <td><button type="button" id="id10"></button></td>
+        <td><button type="button" id="id11"></button></td>
+        <td><button type="button" id="id12"></button></td>
+      </tr>
+      <tr>
+        <td><button type="button" id="id20"></button></td>
+        <td><button type="button" id="id21"></button></td>
+        <td><button type="button" id="id22"></button></td>
+      </tr>
+    </table>
+
+    <br>
+  </div>
+
+  <!-- Need to have JQuery and Javascript for DropDown Actions to work -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  <script src="js/tic_tac_toe.js"></script>
+</body>
+
 </html>
