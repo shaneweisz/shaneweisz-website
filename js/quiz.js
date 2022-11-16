@@ -1,4 +1,4 @@
-var answers = ["E: Friends", "C: Michu", "A: Scotch Game", "B: Forrest Gump", "B: Python", "C: 1 minute 30 seconds", "C: Graph Theory", "E: Cape Robin-Chat", "C: Hamilton", "C: The Fruity Loopy Bird"]
+var answers = ["E: Cape Robin-Chat", "C: Michu", "A: Scotch Game", "B: Forrest Gump", "B: Python", "C: 1 minute 30 seconds", "C: Pigeon pose", "E: Friends", "C: Hamilton", "C: The Fruity Loopy Bird"]
 
 btn = document.getElementById("btnSubmit");
 btn.addEventListener("click", function () {
